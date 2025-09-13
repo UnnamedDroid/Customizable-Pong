@@ -1,0 +1,21 @@
+If you are new to GitHub or running python code, this note will explain how to do actually play the game.
+
+Before you can run Python code on your PC, you need to install the latest version of Python, you can find it here: https://www.python.org/downloads
+Also make sure to set your environment variables to that python version, that is too complicated to type down here so whatch a youtube tutorial about it or smth
+
+When the zip file is installed, unzip it. There should be a folder with the same name now in your downloads (or wherever you chose the folder to be)
+
+Go inside the folder and right click on empty space. An option in the drop-down menu should be "Open in Terminal". This is where you give your computer the message to open the game.
+
+If you don't allready have pyGame installed, install it by typing in the terminal:
+pip install pygame
+this may not work, in case of this not working, type:
+python -r pip install pygame
+
+After you are sure you have installed pygame properly, in the terminal, run:
+python game.py
+
+It should bring up options of customizing settings, so follow along with them to customize the game.
+
+Thats all i think it should work. if not then just copy and paste the error into google or chatgpt or smth :/
+yeh thanks for checking out my lil project ok thanks bye.

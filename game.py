@@ -26,7 +26,7 @@ elif Custom == "y":
     elif c_input == "BLUE":
         WHITE = (0, 0, 255)
     elif c_input == "YELLOW":
-        WHITE = (0, 255, 255)
+        WHITE = (255, 255, 0)
     elif c_input == "MAGENTA":
         WHITE = (255, 0, 255)
     # size x
@@ -42,11 +42,11 @@ elif Custom == "y":
     elif c_input.isdigit():
         HEIGHT = int(c_input)
     # size of ball
-    c_input = input("How big do you want the ball to be? (1-15)\nDefault : 7\n")
+    c_input = input("How big do you want the ball to be? (3-18)\nDefault : 7\n")
     if c_input == "":
         BALL_RADIUS = 7
     elif c_input.isdigit():
-        BALL_RADIUS = clamp(int(c_input), 1, 15)
+        BALL_RADIUS = clamp(int(c_input), 3, 18)
     # speed of ball
     c_input = input("How fast do you want the ball to go? (3-20)\nDefault : 7\n")
     if c_input == "":

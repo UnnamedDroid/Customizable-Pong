@@ -8,6 +8,8 @@ WIDTH, HEIGHT = 700, 500
 BALL_RADIUS = 7
 BALL_MAXVEL = 5
 
+PADDLE_VEL =4
+
 def clamp(n, smallest, largest):
     return max(smallest, min(n, largest))
 
@@ -42,17 +44,22 @@ elif Custom == "y":
     elif c_input.isdigit():
         HEIGHT = int(c_input)
     # size of ball
-    c_input = input("How big do you want the ball to be? (3-18)\nDefault : 7\n")
+    c_input = input("How big do you want the ball to be? (3-15)\nDefault : 7\n")
     if c_input == "":
         BALL_RADIUS = 7
     elif c_input.isdigit():
-        BALL_RADIUS = clamp(int(c_input), 3, 18)
+        BALL_RADIUS = clamp(int(c_input), 3, 15)
     # speed of ball
     c_input = input("How fast do you want the ball to go? (3-20)\nDefault : 7\n")
     if c_input == "":
         BALL_MAXVEL = 5
     elif c_input.isdigit():
         BALL_MAXVEL = clamp(int(c_input), 3, 20)
+    c_input = input("How fast do you want the paddles to go? (3-10-20)\nDefault : 4\n")
+    if c_input == "":
+        PADDLE_VEL = 5
+    elif c_input.isdigit():
+        PADDLE_VEL = clamp(int(c_input), 3, 20)
         
 
 
@@ -74,7 +81,7 @@ SCORE_FONT = pygame.font.SysFont("comicsans", 50)
 
 class Paddle:
     COLOR = WHITE
-    VEL = 4
+    VEL = PADDLE_VEL
 
     def __init__(self, x, y, width, height):
        
